@@ -1,26 +1,40 @@
-from pathlib import Path
 import indexer as idx
+import filer as fil
 import requests
 
-DATA_DIR = Path('datadump')
-INDEX_DATA_DIR = Path(DATA_DIR, 'index-pages')
-# create subdirectory
-INDEX_DATA_DIR.mkdir(parents=True, exist_ok=True)
-for goal in idx.GOAL_TYPES:
-    for page_num in range(1, 10):
-        url = idx.create_search_url(goal=goal, page=page_num)
-        print('Getting:', url)
-        # resp = requests.get(url)
-        # html = resp.text
-        
-        dest_file = Path(TEST_DATA_DIR, str(i) + '.html')
-        # dest_file.write_text(html)
 
-        print('Wrote', len(html), 'bytes to:', dest_file)
+def go():
+    pledged = '' # just ignoring pledged for now
+    for goal in idx.GOAL_TYPES:
+        for page_num in range(1, 10):
+            print("\n")
+            print("Goal: {}  Pledge: {}  Page: {}".format(goal, pledged, page_num ))
+            dest_path =  fil.generate_index_page_path(goal=goal, page=page_num)
+            if dest_path.exists():
+                print('\t', 'Already exists:',  dest_path)
+            else:
+                print('\t', 'Doesn''t exist:', dest_path)
+                url = idx.create_search_url(goal=goal, page=page_num)
+                print('\t', 'Downloading:', url)
+
+                resp = requests.get(url)
+                if resp.status_code == 200:
+                    html = resp.text
+                    print('\t', 'Downloaded chars:', len(html))
+                    
+                    # now create the directory if needed
+                    dest_path.parent.mkdir(parents=True, exist_ok=True)
+                    dest_path.write_text(html)
+                    print('\t', 'Saved to:', dest_path)
+
+                
 
 
 
 
+
+if __name__ == '__main__':
+    go()
 
 
 
