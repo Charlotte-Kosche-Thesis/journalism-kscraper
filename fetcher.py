@@ -10,7 +10,7 @@ def fetch_index_page(goal, pledged, page):
     Returns:
         <dict>: the raw HTML as 'text', and other meta information
     """
-    url = idx.create_search_url(goal=goal, pledged=pledged, page=page_num)
+    url = idx.create_search_url(goal=goal, pledged=pledged, page=page)
     resp = requests.get(url)
     if resp.status_code == 200:
         d = {'text': resp.text, 'url': url, 'goal': goal, 'pledged': pledged, 'page': page }
