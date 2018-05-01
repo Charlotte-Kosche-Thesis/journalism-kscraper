@@ -1,12 +1,12 @@
-import indexer as idx
-import filer as fil
+import jks.indexer as idx
+import jks.filer as fil
 import requests
 from urllib.error import HTTPError
 
 def fetch_index_page(goal, pledged, page):
     """
     If status code is anything but 200, raise an error
-    
+
     Returns:
         <dict>: the raw HTML as 'text', and other meta information
     """
@@ -35,17 +35,13 @@ def fetch_indexes():
                     results = fetch_index_page(goal=goal, pledged=pledged, page=page_num)
                     url = results['url']
                     html = results['text']
-                    print('\t', 'Downloaded from:', url)                    
+                    print('\t', 'Downloaded from:', url)
                     print('\t', 'Downloaded chars:', len(html))
                     # now create the directory if needed
                     dest_path.parent.mkdir(parents=True, exist_ok=True)
                     dest_path.write_text(html)
                     print('\t', 'Saved to:', dest_path)
 
-                
-
-if __name__ == '__main__':
-    fetch_indexes()
 
 
 

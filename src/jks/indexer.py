@@ -10,16 +10,15 @@ SORT_TYPE='newest'
 GOAL_TYPES = [0, 1, 2, 3, 4]
 PLEDGE_TYPES = [0, 1, 2, 3, 4]
 
-BASE_PARAMS = { 'category_id': CATEGORY_JOURNALISM, 
+BASE_PARAMS = { 'category_id': CATEGORY_JOURNALISM,
                        'sort': SORT_TYPE }
 
 
-def create_search_url(goal, pledged="", page=1, ):
+def create_search_url(goal, pledged, page=1):
     myparams = copy(BASE_PARAMS)
-    myparams['goal'] = goal    
+    myparams['goal'] = goal
+    myparams['pledged'] = pledged
     myparams['page'] = page
-    if pledged is not '':
-        myparams['pledged'] = pledged
     url = BASE_ENDPOINT + '?' + urlencode(myparams)
     return url
 

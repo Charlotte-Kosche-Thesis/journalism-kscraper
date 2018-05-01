@@ -1,7 +1,32 @@
 # ckosche python data getter
 
 
-Charlotte
+
+## Dev notes
+
+Following instructions are to be run from project root directory:
+
+To run tests:
+
+```sh
+$ pytest
+```
+
+
+To run tasks:
+
+
+```sh
+$ python go.py
+```
+
+
+
+
+
+
+
+## Random notes
 
 URLs to get:
 
