@@ -18,4 +18,11 @@ $10K to $100K pledged
 /discover/advanced?category_id=13&pledged=2&goal=1&sort=popularity&seed=2446362&page=1
 
 
-### Other goals (TK)
+# Todos
+
+- Organize project directory
+- Write scraper of index pages
+    - extract project json
+    - extract project count
+- Write main loop
+    - Keep incrementing page number until project count on search page is 0 or returns a 404

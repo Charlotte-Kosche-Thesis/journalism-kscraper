@@ -1,0 +1,121 @@
+{
+    "id": 1778007081,
+    "photo": {
+        "key": "assets/020/702/703/2d24586264e0c22cac7b35908e777ad2_original.jpg",
+        "full": "https://ksr-ugc.imgix.net/assets/020/702/703/2d24586264e0c22cac7b35908e777ad2_original.jpg?crop=faces&amp;w=560&amp;h=315&amp;fit=crop&amp;v=1522707657&amp;auto=format&amp;q=92&amp;s=8161ea7ed7f647f2e011e2d5839e4343",
+        "ed": "https://ksr-ugc.imgix.net/assets/020/702/703/2d24586264e0c22cac7b35908e777ad2_original.jpg?crop=faces&amp;w=352&amp;h=198&amp;fit=crop&amp;v=1522707657&amp;auto=format&amp;q=92&amp;s=66ab99c93e03879b00f9819efdb056e4",
+        "med": "https://ksr-ugc.imgix.net/assets/020/702/703/2d24586264e0c22cac7b35908e777ad2_original.jpg?crop=faces&amp;w=272&amp;h=153&amp;fit=crop&amp;v=1522707657&amp;auto=format&amp;q=92&amp;s=7fead57b76a80eb8ecaf74be31d8e109",
+        "little": "https://ksr-ugc.imgix.net/assets/020/702/703/2d24586264e0c22cac7b35908e777ad2_original.jpg?crop=faces&amp;w=208&amp;h=117&amp;fit=crop&amp;v=1522707657&amp;auto=format&amp;q=92&amp;s=7afc6c98f8c60149a2f8817e6452bf45",
+        "small": "https://ksr-ugc.imgix.net/assets/020/702/703/2d24586264e0c22cac7b35908e777ad2_original.jpg?crop=faces&amp;w=160&amp;h=90&amp;fit=crop&amp;v=1522707657&amp;auto=format&amp;q=92&amp;s=5444ff2edcfbef424ee2bc0d72a746cf",
+        "thumb": "https://ksr-ugc.imgix.net/assets/020/702/703/2d24586264e0c22cac7b35908e777ad2_original.jpg?crop=faces&amp;w=48&amp;h=27&amp;fit=crop&amp;v=1522707657&amp;auto=format&amp;q=92&amp;s=2f814f82e1cdfd220c2e855652cc95fd",
+        "1024x576": "https://ksr-ugc.imgix.net/assets/020/702/703/2d24586264e0c22cac7b35908e777ad2_original.jpg?crop=faces&amp;w=1024&amp;h=576&amp;fit=crop&amp;v=1522707657&amp;auto=format&amp;q=92&amp;s=f66766b039ba0a663f3814e15690a2e3",
+        "1536x864": "https://ksr-ugc.imgix.net/assets/020/702/703/2d24586264e0c22cac7b35908e777ad2_original.jpg?crop=faces&amp;w=1552&amp;h=873&amp;fit=crop&amp;v=1522707657&amp;auto=format&amp;q=92&amp;s=537e79f317f322cd1c9120382102bf84"
+    },
+    "name": "Bring Back Gothamist",
+    "blurb": "Gothamist has joined New York institution WNYC, now they need you to step up and bring the site back to its former glory.",
+    "goal": 100000.0,
+    "pledged": 153999.95,
+    "state": "live",
+    "slug": "bring-back-gothamist",
+    "disable_communication": false,
+    "country": "US",
+    "currency": "USD",
+    "currency_symbol": "$",
+    "currency_trailing_code": true,
+    "deadline": 1525492740,
+    "state_changed_at": 1522728322,
+    "created_at": 1521831226,
+    "launched_at": 1522728321,
+    "staff_pick": true,
+    "is_starrable": true,
+    "backers_count": 2267,
+    "static_usd_rate": 1.0,
+    "usd_pledged": "153999.95",
+    "converted_pledged_amount": 153999,
+    "fx_rate": 1.0,
+    "current_currency": "USD",
+    "usd_type": "domestic",
+    "creator": {
+        "id": 675760894,
+        "name": "Gothamist",
+        "is_registered": true,
+        "chosen_currency": null,
+        "avatar": {
+            "thumb": "https://ksr-ugc.imgix.net/assets/020/717/520/3d91c215172f08310f8d28aae23e0b06_original.png?w=40&amp;h=40&amp;fit=crop&amp;v=1522359606&amp;auto=format&amp;q=92&amp;s=4cba7b5f6806bd77e3813a67d97eb4b1",
+            "small": "https://ksr-ugc.imgix.net/assets/020/717/520/3d91c215172f08310f8d28aae23e0b06_original.png?w=160&amp;h=160&amp;fit=crop&amp;v=1522359606&amp;auto=format&amp;q=92&amp;s=8b76243b2e4e02d2a3381a7ea39a1f38",
+            "medium": "https://ksr-ugc.imgix.net/assets/020/717/520/3d91c215172f08310f8d28aae23e0b06_original.png?w=160&amp;h=160&amp;fit=crop&amp;v=1522359606&amp;auto=format&amp;q=92&amp;s=8b76243b2e4e02d2a3381a7ea39a1f38"
+        },
+        "urls": {
+            "web": {
+                "user": "https://www.kickstarter.com/profile/675760894"
+            },
+            "api": {
+                "user": "https://api.kickstarter.com/v1/users/675760894?signature=1525217615.c0a9dc16f1eb8fd56d8378d724c5770b28587f43"
+            }
+        }
+    },
+    "location": {
+        "id": 2459115,
+        "name": "New York",
+        "slug": "new-york-ny",
+        "short_name": "New York, NY",
+        "displayable_name": "New York, NY",
+        "localized_name": "New York",
+        "country": "US",
+        "state": "NY",
+        "type": "Town",
+        "is_root": false,
+        "urls": {
+            "web": {
+                "discover": "https://www.kickstarter.com/discover/places/new-york-ny",
+                "location": "https://www.kickstarter.com/locations/new-york-ny"
+            },
+            "api": {
+                "nearby_projects": "https://api.kickstarter.com/v1/discover?signature=1525209079.35bf5302cff0e0911e557e5e6209e726f4954a9e&amp;woe_id=2459115"
+            }
+        }
+    },
+    "category": {
+        "id": 13,
+        "name": "Journalism",
+        "slug": "journalism",
+        "position": 10,
+        "color": 1228010,
+        "urls": {
+            "web": {
+                "discover": "http://www.kickstarter.com/discover/categories/journalism"
+            }
+        }
+    },
+    "profile": {
+        "id": 3341017,
+        "project_id": 3341017,
+        "state": "inactive",
+        "state_changed_at": 1521831226,
+        "name": null,
+        "blurb": null,
+        "background_color": null,
+        "text_color": null,
+        "link_background_color": null,
+        "link_text_color": null,
+        "link_text": null,
+        "link_url": null,
+        "show_feature_image": false,
+        "background_image_opacity": 0.8,
+        "should_show_feature_image_section": true,
+        "feature_image_attributes": {
+            "image_urls": {
+                "default": "https://ksr-ugc.imgix.net/assets/020/702/703/2d24586264e0c22cac7b35908e777ad2_original.jpg?crop=faces&amp;w=1552&amp;h=873&amp;fit=crop&amp;v=1522707657&amp;auto=format&amp;q=92&amp;s=537e79f317f322cd1c9120382102bf84",
+                "baseball_card": "https://ksr-ugc.imgix.net/assets/020/702/703/2d24586264e0c22cac7b35908e777ad2_original.jpg?crop=faces&amp;w=560&amp;h=315&amp;fit=crop&amp;v=1522707657&amp;auto=format&amp;q=92&amp;s=8161ea7ed7f647f2e011e2d5839e4343"
+            }
+        }
+    },
+    "spotlight": false,
+    "urls": {
+        "web": {
+            "project": "https://www.kickstarter.com/projects/675760894/bring-back-gothamist",
+            "rewards": "https://www.kickstarter.com/projects/675760894/bring-back-gothamist/rewards"
+        }
+    },
+    "percent_funded": 153.99995
+}
