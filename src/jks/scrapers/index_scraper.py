@@ -17,4 +17,3 @@ def extract_project_data(html):
     Returns:
         <list> of <dict>
     """
-
