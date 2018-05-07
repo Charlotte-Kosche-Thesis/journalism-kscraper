@@ -10,9 +10,10 @@ sample_path = Path("samples", "index-extract-gothamist.json")
 data = json.loads(sample_path.read_text())
 
 ps.extract_project(data)
-
-
 """
+
+
+from src.jks.helpers import timetostr
 
 
 
@@ -69,8 +70,8 @@ def _ext_time_fields(kd):
     Extra fields to add:
     """
     d = {}
-    d['created_at'] = _timetostr(kd['created_at'])
-    d['deadline'] = _timetostr(kd['deadline'])
+    d['created_at'] = timetostr(kd['created_at'])
+    d['deadline'] = timetostr(kd['deadline'])
     return d
 
 def _ext_meta(kd):
