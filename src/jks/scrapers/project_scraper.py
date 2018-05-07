@@ -1,26 +1,43 @@
-from datetime import datetime as dt
 
 
-def wrangle_project_data(ksdict):
+
+def extract_project(kd):
     """
     Args:
-        ksdict <dict>:
+        kd <dict>:
             A dictionary from parsed JSON representing a KS project, e.g. index-extract-gothamist.json
 
     Returns:
         <dict>: a dictionary containing the filtered values needed/wanted
     """
+    # rather than do this repetitive code:
+    #
+    #   d.update(_ext_meta(kd))
+    #   ...
+    #   d.update(_ext_whatever(kd))
+    #
+    # ...we make a list containing references to all the extractor functions
+    #  so that we can loop through them
+
     d = {}
-    d.update(extract_meta(ksdict))
-    d.update(extract_time_fields(ksdict))
+    _extractorfoos = [
+        _ext_meta,
+        _ext_location,
+        _ext_time_fields,
+    ]
+
+
+    for extractor in _extractorfoos:
+        x = extractor(kd)
+        d.update(x)
 
     return d
 
 
-def extract_time_fields(ksdict):
+def _ext_time_fields(kd):
     """
     Args:
-        ksdict <dict>:
+        kd <dict>:
             A dictionary from parsed JSON representing a KS project, e.g. index-extract-gothamist.json
 
     Returns:
@@ -36,10 +53,11 @@ def extract_time_fields(ksdict):
     Extra fields to add:
     """
     d = {}
-    d['created_at'] = dt.fromtimestamp(ksdict['created_at']).isoformat()
+    d['created_at'] = _timetostr(kd['created_at'])
+    d['deadline'] = _timetostr(kd['deadline'])
     return d
 
-def extract_meta(ksdict):
+def _ext_meta(kd):
     """
     Extracts:
         - name
@@ -50,6 +68,20 @@ def extract_meta(ksdict):
         - url
     """
     d = {}
-    d['url'] = ksdict['urls']['web']['project']
-
+    d['url'] = kd['urls']['web']['project']
+    d['creator_id'] = kd['creator']['id']
+    d['creator_name'] = kd['creator']['name']
     return d
+
+def _ext_location(kd):
+    d = {}
+    _loc = kd['location']
+
+    d['country'] = kd['us']
+    d['location_name'] = _loc['displayable_name']
+    d['location_slug'] = _loc['slug']
+    d['location_type'] = _loc['type']
+    d['location_state'] = _loc.get('state')
+    return d
+
+
