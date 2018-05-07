@@ -1,3 +1,19 @@
+"""
+Test code
+
+import src.jks.scrapers.project_scraper as ps
+from pathlib import Path
+import json
+
+
+sample_path = Path("samples", "index-extract-gothamist.json")
+data = json.loads(sample_path.read_text())
+
+ps.extract_project(data)
+
+
+"""
+
 
 
 
@@ -77,7 +93,7 @@ def _ext_location(kd):
     d = {}
     _loc = kd['location']
 
-    d['country'] = kd['us']
+    d['country'] = kd['country']
     d['location_name'] = _loc['displayable_name']
     d['location_slug'] = _loc['slug']
     d['location_type'] = _loc['type']
