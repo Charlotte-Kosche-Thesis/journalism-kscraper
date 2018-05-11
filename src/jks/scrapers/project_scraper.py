@@ -88,6 +88,10 @@ def _ext_meta(kd):
     d['url'] = kd['urls']['web']['project']
     d['creator_id'] = kd['creator']['id']
     d['creator_name'] = kd['creator']['name']
+    d['project_name'] = kd['name']
+    d['project_description'] = kd['blurb']
+    s['state'] = kd['state']
+
     return d
 
 def _ext_location(kd):
@@ -101,4 +105,6 @@ def _ext_location(kd):
     d['location_state'] = _loc.get('state')
     return d
 
+def _ext_money(kd:
+    pass
 
