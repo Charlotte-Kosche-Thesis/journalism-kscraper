@@ -43,7 +43,6 @@ def extract_project(kd):
         _ext_time_fields,
     ]
 
-
     for extractor in _extractorfoos:
         x = extractor(kd)
         d.update(x)
