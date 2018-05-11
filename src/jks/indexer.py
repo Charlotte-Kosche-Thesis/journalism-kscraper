@@ -24,6 +24,27 @@ def create_search_url(goal, pledged, page=1):
 
 
 
+def first_pageparams():
+    stuff = []
+    for g in GOAL_TYPES:
+        for p in PLEDGE_TYPES:
+            d = {}
+            d['goal'] = g
+            d['pledged'] = p
+            d['page'] = 1
+            d['url'] = create_search_url(g, p, page=1)
+            stuff.append(d)
+    return stuff
+
+
+
+if __name__ == '__main__':
+    for u in first_pageparams():
+        print(u)
+
+
+
+
 # def create_goal_urls():
 #     urls = []
 #     for g in GOAL_TYPES:

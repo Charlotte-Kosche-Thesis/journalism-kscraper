@@ -2,6 +2,16 @@
 
 
 
+## To fetch pages
+
+(do this in root directory of project)
+
+```sh
+$ python go.py fetch-firstpages
+$ python go.py fetchall
+```
+
+
 ## Dev notes
 
 Following instructions are to be run from project root directory:

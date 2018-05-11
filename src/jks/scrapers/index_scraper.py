@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import json
 
+PROJECTS_PER_PAGE = 12
 
 
 def extract_project_count(html):

@@ -27,6 +27,10 @@ HELP_STRING = """
     info:
         This message.
 
+    fetch-firstpages:
+        whatever
+
+
     fetch-index:
         Iterate through all the search pages for journalism projects
         and save them to datastash/index-pages
@@ -60,5 +64,13 @@ if __name__ == '__main__':
         print("Hello world!")
     elif cmd == 'fetch-index':
         print("Fetching the search/index pages")
+    elif cmd == 'fetch-firstpages':
+        fet.fetch_first_indexpages()
+    elif cmd == 'fetchall':
+        fet.main()
+    elif cmd == 'status':
+        fet.statusfoo()
+
+
     else:
         print("The command", cmd, "has not been defined yet...")
