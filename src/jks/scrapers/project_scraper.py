@@ -71,6 +71,7 @@ def _ext_time_fields(kd):
     d = {}
     d['created_at'] = timetostr(kd['created_at'])
     d['deadline'] = timetostr(kd['deadline'])
+    d['launch'] = timetostr(kd['launched_at'])
     return d
 
 def _ext_meta(kd):
@@ -89,8 +90,8 @@ def _ext_meta(kd):
     d['creator_name'] = kd['creator']['name']
     d['project_name'] = kd['name']
     d['project_description'] = kd['blurb']
-    s['state'] = kd['state']
-
+    s['status'] = kd['state']
+    d['staff_pick'] = kd['staff_pick']
     return d
 
 def _ext_location(kd):
@@ -104,6 +105,11 @@ def _ext_location(kd):
     d['location_state'] = _loc.get('state')
     return d
 
-def _ext_money(kd:
-    pass
-
+def _ext_crowdfunding(kd):
+    d = {}
+    d['goal'] = kd['goal']
+    d['pledged'] = kd['pledged']
+    d['percent_funded'] = kd['percent_funded']
+    d['currency'] = kd['currency']
+    d['backers'] = kd['backers_count']
+    return d
