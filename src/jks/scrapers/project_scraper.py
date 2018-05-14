@@ -14,7 +14,7 @@ ps.extract_project(data)
 
 
 from src.jks.helpers import timetostr
-
+import json
 
 
 
@@ -41,11 +41,20 @@ def extract_project(kd):
         _ext_meta,
         _ext_location,
         _ext_time_fields,
+        _ext_crowdfunding,
     ]
 
     for extractor in _extractorfoos:
-        x = extractor(kd)
-        d.update(x)
+        try:
+            x = extractor(kd)
+        except KeyError as err:
+            print("oops ValueError", err)
+            print(json.dumps(kd, indent=2))
+        else:
+            d.update(x)
+
+
+
 
     return d
 
@@ -90,19 +99,19 @@ def _ext_meta(kd):
     d['creator_name'] = kd['creator']['name']
     d['project_name'] = kd['name']
     d['project_description'] = kd['blurb']
-    s['status'] = kd['state']
+    d['status'] = kd['state']
     d['staff_pick'] = kd['staff_pick']
     return d
 
 def _ext_location(kd):
     d = {}
-    _loc = kd['location']
-
-    d['country'] = kd['country']
-    d['location_name'] = _loc['displayable_name']
-    d['location_slug'] = _loc['slug']
-    d['location_type'] = _loc['type']
-    d['location_state'] = _loc.get('state')
+    _loc = kd.get('location')
+    if _loc:
+        d['country'] = kd['country']
+        d['location_name'] = _loc['displayable_name']
+        d['location_slug'] = _loc['slug']
+        d['location_type'] = _loc['type']
+        d['location_state'] = _loc.get('state')
     return d
 
 def _ext_crowdfunding(kd):
